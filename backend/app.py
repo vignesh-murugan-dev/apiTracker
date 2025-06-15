@@ -28,6 +28,11 @@ db.init_app(app)
 def before_any_request():
     log_request()
 
+# Basic route to test the Flask app
+@app.route("/api/test")
+def test():
+    return "Flask API is working!"
+
 @app.route('/items', methods=['GET'])
 def get_items():  # put application's code here
     return 'Hello World!'
