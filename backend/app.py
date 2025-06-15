@@ -22,10 +22,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = (
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-# Middleware (optional)
-# @app.before_request
-# def before_any_request():
-#     log_request()
+# Middleware
+@app.before_request
+def before_any_request():
+    log_request()
 
 # Routes
 @app.route("/api/test")
