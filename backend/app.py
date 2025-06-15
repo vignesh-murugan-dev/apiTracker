@@ -9,7 +9,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# build the connection string
+# Database config
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_HOST = os.getenv("DB_HOST")
@@ -22,19 +22,18 @@ app.config['SQLALCHEMY_DATABASE_URI'] = (
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-# capturing the request through a middleware
-# and adding the request data to our database
+# Middleware (optional)
 # @app.before_request
 # def before_any_request():
 #     log_request()
 
-# Basic route to test the Flask app
+# Routes
 @app.route("/api/test")
 def test():
     return "Flask API is working!"
 
 @app.route('/items', methods=['GET'])
-def get_items():  # put application's code here
+def get_items():
     return 'Hello World!'
 
 @app.route('/items', methods=['POST'])
@@ -45,20 +44,13 @@ def create_items():
 @app.route('/items', methods=['PUT'])
 def update_items():
     data = request.get_json()
-    id = data['id']
-    name = data['name']
-    email = data['email']
-    return jsonify(id=id, name=name, email=email)
+    return jsonify(id=data['id'], name=data['name'], email=data['email'])
 
 @app.route('/items', methods=['DELETE'])
 def delete_items():
     data = request.get_json()
-    id = data['id']
-    return jsonify(id=id)
+    return jsonify(id=data['id'])
 
 @app.errorhandler(Exception)
 def handle_error(e):
     return jsonify({"error": str(e)}), 500
-
-if __name__ == '__main__':        
-    app.run(debug=False)
