@@ -56,5 +56,9 @@ def delete_items():
     id = data['id']
     return jsonify(id=id)
 
+@app.errorhandler(Exception)
+def handle_error(e):
+    return jsonify({"error": str(e)}), 500
+
 if __name__ == '__main__':        
     app.run(debug=False)
