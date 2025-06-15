@@ -21,5 +21,10 @@ def log_request():
         user_agent=request.headers.get('User-Agent')
     )
 
+    print(f"Logging request: {log}")
+    # Add the log to the database session and commit
+
     db.session.add(log)
     db.session.commit()
+
+    print(f"Request logged with ID: {request_id}")
