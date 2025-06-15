@@ -24,9 +24,9 @@ db.init_app(app)
 
 # capturing the request through a middleware
 # and adding the request data to our database
-@app.before_request
-def before_any_request():
-    log_request()
+# @app.before_request
+# def before_any_request():
+#     log_request()
 
 # Basic route to test the Flask app
 @app.route("/api/test")
