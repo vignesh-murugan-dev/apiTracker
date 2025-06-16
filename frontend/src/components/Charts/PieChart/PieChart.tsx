@@ -56,7 +56,7 @@ const DynamicPieChart: React.FC = memo(() => {
     // Simulate fetching data from an API
     const fetchData = async () => {
       try {
-        const response = await axios.get<DataItem[]>("http://127.0.0.1:5000/requests/aggregate?field=user_agent");
+        const response = await axios.get<DataItem[]>("http://localhost:5000/api/requests/aggregate?field=user_agent");
         if (response.data && response.data.length > 0) {
           setData(response.data);
         }
