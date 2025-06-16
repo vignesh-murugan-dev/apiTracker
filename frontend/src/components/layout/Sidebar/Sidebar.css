@@ -1,0 +1,6 @@
+.sidebar {
+  width: 200px;  /* Reduce from default 250px to 200px */
+  min-width: 100px;  /* Ensure sidebar doesn't shrink */
+  height: 100%;
+  border-right: 1px solid #e0e0e0;
+}

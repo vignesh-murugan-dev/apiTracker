@@ -1,0 +1,88 @@
+.custom-table-wrapper {
+    background: white;
+    padding: 0px;
+    margin-top: 20px;
+    height: 400px;  
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.custom-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.custom-table-title {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.custom-table-actions {
+    display: flex;
+    gap: 10px;
+}
+.custom-table-actions input:focus {
+    outline: none;
+}
+
+.table-action {
+    padding: 5px 10px;
+    border: 1px solid #e2e8f0; /* Gray border */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.rdt_Table {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 80px);  /* Increased space for pagination */
+}
+
+.rdt_TableHead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: white;
+}
+
+.rdt_TableBody {
+    overflow-y: auto !important;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.rdt_Pagination {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    z-index: 2;
+    padding: 8px 0;
+    border-top: 1px solid #e2e8f0;
+    margin-top: auto;  /* Push pagination to bottom */
+}
+
+/* Scrollbar styles */
+.rdt_TableBody::-webkit-scrollbar {
+    width: 8px;
+}
+
+.rdt_TableBody::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.rdt_TableBody::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+.rdt_TableBody::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}

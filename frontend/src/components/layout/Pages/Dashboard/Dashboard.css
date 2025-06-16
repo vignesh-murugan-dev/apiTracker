@@ -1,0 +1,66 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border-radius: 8px;
+  background-color: white;
+  margin-top: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D3748;
+  padding: 0px 8px;
+}
+
+.chart-container {
+  display: flex;
+  gap: 20px;
+}
+
+.pie-chart, .bar-chart {
+  width: 100%;
+  height: 330px;
+  border-radius: 8px;
+  background-color: white;
+  margin: 0px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bar-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chart-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.metric-select {
+  padding: 8px;
+  border: 1px solid #CBD5E0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #2D3748;
+  background-color: #EFEFEF;
+  width: 120px;
+}
+
+.metric-select:focus {
+  outline: none;
+}

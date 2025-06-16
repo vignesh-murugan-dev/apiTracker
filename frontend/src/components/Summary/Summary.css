@@ -1,0 +1,54 @@
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.title {
+    color: #718096;
+    font-weight: 600;
+}
+
+.summary-cards {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0px 16px;
+}
+
+.summary-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    gap: 8px;
+    margin: 8px 0px;
+    padding: 16px;
+}
+
+.card-title {
+    color: #77859B;
+    font-size: 14px;
+}
+
+.card-value {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.up {
+    color: green;
+}
+
+.down {
+    color: red;
+}
+
+.card-title, .card-value, .up, .down {
+    margin: 0px;
+}
+
+.up , .down {
+    font-size: 12px;
+}
